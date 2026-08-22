@@ -1,15 +1,16 @@
-# Bulls and Cows Algorithmic Solver
+# Bulls and Cows Solver 🎯
 
-A C++ implementation of the Bulls and Cows game, developed for the Algorithms course at the Academic College of Tel-Aviv Yaffo (MTA).
+This is a C++ implementation of the classic Bulls and Cows code-breaking game. Not only does it simulate the game, but it also includes two automated algorithmic strategies to crack the secret number as efficiently as possible.
 
-## Features
-* **Game Simulation:** Custom n-digit secret numbers with bulls and cows feedback[cite: 1].
-* **DFS Strategy:** Finds the lexicographically first consistent guess[cite: 1].
-* **BFS Strategy:** Uses a Minimax approach to minimize the worst-case search space depth[cite: 1].
+## How It Works
+The program generates a secret number, and the built-in solvers try to guess it using feedback (Bulls = right digit, right place; Cows = right digit, wrong place). 
 
-## Usage
-Run the program and input the following parameters sequentially when prompted[cite: 1]:
-1. `n`: Length of the secret number[cite: 1].
-2. `k`: Maximum digit value[cite: 1].
-3. `strategy_num`: `1` for DFS, `2` for BFS[cite: 1].
-4. `seed`: Random seed for reproducibility[cite: 1].
+* **DFS Strategy:** A straightforward approach that iterates through the options and picks the first guess that perfectly aligns with all previous feedback.
+* **BFS (Minimax) Strategy:** A more advanced approach that evaluates the search space to minimize the worst-case scenario, guaranteeing it finds the secret number in the fewest possible rounds.
+
+## Getting Started
+When you run the compiled program, the console will ask you for four setup parameters:
+1. `n`: The length of the secret number.
+2. `k`: The maximum digit value allowed.
+3. `strategy_num`: Type `1` for the DFS solver or `2` for the BFS solver.
+4. `seed`: A random seed number so you can replay the exact same game setup.
